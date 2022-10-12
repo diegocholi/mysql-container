@@ -16,4 +16,4 @@ services:
       # MYSQL_RANDOM_ROOT_PASSWORD: "1" # Passwd random for root
     volumes:
       - ./volumes/mysql/data:/var/lib/mysql
-      — my.cnf:/etc/mysql/My.conf
+      - my.cnf:/etc/mysql/conf.d
