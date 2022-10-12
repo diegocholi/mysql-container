@@ -4,7 +4,7 @@ services:
   db:
     # platform: linux/x86_64 # Configuração para MAC-OS
     image: mysql:8.0
-    command: --default-authentication-plugin=mysql_native_password
+    command: bash -c "--default-authentication-plugin=mysql_native_password && --max_connections=6000"
     restart: unless-stopped
     ports:
       - 3306:3306
