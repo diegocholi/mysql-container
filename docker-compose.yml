@@ -5,9 +5,8 @@ services:
     # platform: linux/x86_64 # Configuração para MAC-OS
     image: mysql:8.0
     restart: unless-stopped
-    # && mysqld --user=root --max_connections=6000
     command: >
-      --default-authentication-plugin=mysql_native_password && bash -c "mysqld --user=root --max_connections=2213"
+      --default-authentication-plugin=mysql_native_password && bash -c "mysqld --user=root --max_connections=6000"
     ports:
       - 3306:3306
     environment:
