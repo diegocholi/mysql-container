@@ -7,7 +7,7 @@ services:
     restart: unless-stopped
     # && mysqld --user=root --max_connections=6000
     command: >
-      --default-authentication-plugin=mysql_native_password
+      --default-authentication-plugin=mysql_native_password && bash -c "mysqld --user=root --max_connections=2213"
     ports:
       - 3306:3306
     environment:
