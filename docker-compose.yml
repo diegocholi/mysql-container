@@ -12,7 +12,7 @@ services:
       MYSQL_ROOT_PASSWORD: 7WAE1#Ofne1 # root passwd
       MYSQL_DATABASE: init_db # Inital database
       MYSQL_USER: admin # New User
-      MYSQL_PASSWORD: 7WAE1#Ofne1 # New User Passwd
+      MYSQL_PASSWORD: 1WAE1#Ofne2 # New User Passwd
       # MYSQL_RANDOM_ROOT_PASSWORD: "1" # Passwd random for root
     volumes:
       - ./volumes/mysql/data:/var/lib/mysql
