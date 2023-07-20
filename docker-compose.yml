@@ -16,7 +16,7 @@ services:
       MYSQL_PASSWORD: 1WAE1#Ofne2 # New User Passwd
       # MYSQL_RANDOM_ROOT_PASSWORD: "1" # Passwd random for root
     volumes:
-      - ./volumes/mysql/data:/var/lib/mysql
+      - ./data:/var/lib/mysql
     networks:
       - mysql
 
