@@ -6,7 +6,7 @@ services:
     image: mysql:8.0
     restart: unless-stopped
     command: >
-      --default-authentication-plugin=mysql_native_password"
+      --default-authentication-plugin=mysql_native_password
     ports:
       - 3306:3306
     environment:
@@ -14,6 +14,8 @@ services:
       MYSQL_DATABASE: newproject_data # Inital database
       MYSQL_USER: admin # New User
       MYSQL_PASSWORD: "1WAE1#Ofne2" # New User Passwd
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+      MYSQL_ROOT_HOST: "%" # Permite conexões de qualquer host
       # MYSQL_RANDOM_ROOT_PASSWORD: "1" # Passwd random for root
     volumes:
       - ./data:/var/lib/mysql
