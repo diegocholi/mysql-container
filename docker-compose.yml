@@ -11,10 +11,12 @@ services:
     env_file:
       - .env
     environment:
-      MYSQL_ROOT_PASSWORD: "7WAE1#Ofne1" # root passwd
-      MYSQL_DATABASE: newproject_data # Inital database
-      MYSQL_USER: admin # New User
-      MYSQL_PASSWORD: "1WAE1#Ofne2" # New User Passwd
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
       MYSQL_ALLOW_EMPTY_PASSWORD: "no"
       MYSQL_ROOT_HOST: "%" # Permite conexões de qualquer host
       # MYSQL_RANDOM_ROOT_PASSWORD: "1" # Passwd random for root
