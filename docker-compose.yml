@@ -8,6 +8,8 @@ services:
     command: mysqld --default-authentication-plugin=mysql_native_password
     ports:
       - 3306:3306
+    env_file:
+      - .env
     environment:
       MYSQL_ROOT_PASSWORD: "7WAE1#Ofne1" # root passwd
       MYSQL_DATABASE: newproject_data # Inital database
