@@ -12,6 +12,6 @@ while ! mysql -h $DB_HOST -u "$DB_USERNAME" -p"$DB_PASSWORD" -e "SELECT 1" > /de
 done
 
 # Agora, executa o comando de restauração.
-mysql -h $DB_HOST -u "$DB_USERNAME" -p"$DB_PASSWORD" "$DB_DATABASE" < /home/gta/server/mkbase.sql
+mysql -h $DB_HOST -u "$DB_USERNAME" -p"$DB_PASSWORD" "$DB_DATABASE" < /docker-entrypoint-initdb.d/mkbase.sql
 
 echo "Backup restaurado com sucesso."
